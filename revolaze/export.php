@@ -9,11 +9,6 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-function customError($errno, $errstr) {
-    echo "<b>Error: </b> [$errno] $errstr";
-}
-set_error_handler("customError");
-
 $len = $_POST['numOfLayers'];
 $dir = $_SERVER['DOCUMENT_ROOT'] . "/output";
 $path = $_SERVER['DOCUMENT_ROOT'] . "/output/" . generateRandomString() . ".tiff";
