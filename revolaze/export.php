@@ -40,8 +40,6 @@ if(file_exists($path)) {
     header('Pragma: public');
     header('Content-Length: ' . filesize($path));
     ignore_user_abort(true);
-    ob_clean();
-    flush();
     readfile($path);
     if (connection_aborted()) {
         unlink($path);
