@@ -15,7 +15,6 @@ function customError($errno, $errstr) {
 set_error_handler("customError");
 
 $len = $_POST['numOfLayers'];
-exec("rm -rf /var/www/html/output/");
 $dir = $_SERVER['DOCUMENT_ROOT'] . "/output";
 $path = $_SERVER['DOCUMENT_ROOT'] . "/output/" . generateRandomString() . ".tiff";
 
