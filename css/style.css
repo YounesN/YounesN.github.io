@@ -1,14 +1,62 @@
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
 }
 
-.align-right {
-    text-align: right;
+::-webkit-scrollbar { 
+  display: none; 
 }
 
-footer {
-    background-color: #555;
-    color: white;
-    padding: 15px;
+.background {
+  height: 100%;
+  background: url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.65;
+  background-attachment: fixed;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+*::selection {
+  color: #fff;
+  background: #3a2099;
+}
+
+*::-moz-selection {
+  color: #fff;
+  background: #3a2099;
+}
+
+h3 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2em;color: #000;
+}
+
+#changing-text {
+  font-weight: bold;
+  color: orange;
 }

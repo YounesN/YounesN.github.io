@@ -1,0 +1,14 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}

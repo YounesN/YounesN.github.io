@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Younes Nejahi's Website - Home</title>
+    <meta name="description" content="This is Younes Nejahi, and welcome to my personal website. You can find all the information about me in this website.">
+    <meta name="author" content="Younes Nejahi">
+    <meta charset="UTF-8">
+
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Younes Nejahi's Website</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Personal Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://www.facebook.com/nejahi"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/YounesNejahi"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-right">
+                    <img src="images/younes.jpg" class="img-circle" alt="Younes Nejahi" width="360px" height="360px">
+                </div>
+                <div class="col-md-6">
+                    <h2>Welcome to My Personal Page</h2>
+                    <p>PhD Candiate<br>
+                        <a href="http://gomc.eng.wayne.edu/">Multicore Computing Lab</a><br>
+                        <a href="http://www.cs.wayne.edu/">Department of Computer Science</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Personal Information</h1>
+        <div class="well">
+            <p>I received my BS in Computer Science in 2013 from Isfahan University of Technology in Isfahan, Iran. I am currently studying PhD at Wayne State University. My research interests are Parallel Computing, GPGPU and Game design. Currently working on <a href="http://gomc.eng.wayne.edu/">GOMC</a> project which is an open-source Gibbs ensemble Monte Carlo simulation engine. In general I am interested in general-purpose computing on GPUs and optimization methods. Our objective is to use GPUs for different variety of computational problems. My Curriculum Vitae and all of my information is available in <a href="upload/CV.pdf">PDF format</a>.<p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>My research</h1>
+        <div class="well">
+            <dl>
+                <dt>GOMC Project (Current)</dt>
+                <dd>GPU Optimized Monte Carlo (GOMC) is an open-source Gibbs ensemble Monte Carlo simulation engine.  This code is developed for the simulation of vapor-liquid equilibria for systems containing tens of thousands of interaction sites. This project is a joint inter-departmental project between the Multicore Computing Lab in the Department of Computer Science at Wayne State University and Professor Potoff's group from the Department of Department of Chemical Engineering and Materials Science at Wayne State University.</dd>
+                <br>
+                <dt>DSI Studio Project (Fall 2015)</dt>
+                <dd>DSI Studio is an open source diffusion MRI analysis tool. It has been used in several human and animal studies to map brain connections and correlate diffusion MRI findings with diseases. The following features have been done by me:
+                    <ul>
+                        <li>Independent Component Analysis + Ball Stick Model (ICA+BSM)</li>
+                        <li>Isotropic Diffusion Spectrum Imaging (IDSI) with Independent Component Analysis  with a ball and stick model</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="well">
+            <dl>
+                <dt>Secure remote garage door controller implemented on raspberry pi</dt>
+                <dd>My final project for CSC 5250 - Network, Distributed, and Concurrent Programming
+                    <br>In this project a garage door which simulated by a raspberry pi can be controlled by an app on your phone using a secured SSL connection.<br>
+                    Files for this project can be download here.
+                </dd>
+                <br>
+                <dt>Dynamic network design and reconfiguration for Wireless Sensor Networks using different topologies</dt>
+                <dd>My final project for CSC 7290 - Advanced Computer Networking<br>
+                    In this project I have simulated a WSN which dynamically reconfigures to change some of the configuration of each node. This method can also be used to dynamically generate a network based on different topologies like star.<br>
+                    Full report of this project can be found here.
+                </dd>
+                <br>
+                <dt>Interaction between ARQ and coding: retransmission versus heavier coding</dt>
+                <dd>My final project for CSC 6290 - Data Communication and Computer Networks<br>
+                    There is a trade off between hard coding or retransmission of messages in a computer network. In this project I have studied the impact of focusing on each of these methods.<br>
+                    Full report of this project can be found here, also the code for this project available here.
+                </dd>
+                <br>
+                <dt>Event Scheduler</dt>
+                <dd>This website is designed to share schedules, arrange a meeting or sign-up for volunteer events. Features like edit, delete, invite and tracking invitations is available. This project was done for The Medical Education Support Group at 2014 and can be used by Wayne State students and staff.
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p>© 2016, All Rights Reserved. Any content on this website should not be used or published without permission from the author.<br>This website is made using <a href="http://getbootstrap.com/">Bootstrap</p>
+    </footer>
+</body>
+</html>
