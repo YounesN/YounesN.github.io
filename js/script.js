@@ -91,8 +91,7 @@ $( document ).ready(function() {
     $('#changing-text').teletype({
         text: [
           'software developer,',
-          'collaborative and hard worker,',
-          'raspberry pier',
+          'collaborative worker,',
           'tea drinker,',
           'noun verber.'
         ]
