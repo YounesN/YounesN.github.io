@@ -7,7 +7,7 @@ body, html {
 
 
 .background {
-  height: 100%;
+  height: 50%;
   background: url("../images/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ body, html {
 .caption {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 20%;
   width: 100%;
   text-align: center;
   color: #000;
