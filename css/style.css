@@ -1,14 +1,14 @@
 body, html {
   height: 100%;
   margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-  background-color: #e2e2e2;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #444;
+  background-color: #f0f0f0;
 }
 
 
 .background {
-  height: 50%;
+  height: 100%;
   background: url("../images/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -20,19 +20,44 @@ body, html {
 .caption {
   position: absolute;
   left: 0;
-  top: 20%;
+  top: 45%;
   width: 100%;
   text-align: center;
   color: #000;
 }
 
-
 .caption span.border {
   background-color: #111;
   color: #FFFFFF;
-  padding: 4px;
+  padding: 3px;
   font-size: 25px;
   letter-spacing: 10px;
+}
+
+.arrow_container {
+  position: absolute;
+  left: 0;
+  top: 85%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  box-sizing: border-box;
+  height: 4vw;
+  width: 4vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover {
+  border-bottom-width: 3px;
+  border-right-width: 3px;
 }
 
 .center {
@@ -51,19 +76,16 @@ body, html {
 }
 
 h3 {
-  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 2em;
   color: #000;
 }
 
 h4 {
-  font-family: 'Quicksand', sans-serif;
   font-size: 1.1em;
   color: #000;
 }
 
 .title {
-  font-family: 'Lato', sans-serif;
   font-size: 1.4em;
   color: #000;
 }
@@ -75,4 +97,41 @@ h4 {
 
 .add-space-top {
   margin-top: 25px;
+}
+
+i.fas,
+i.fab {
+  font-size: 40px;
+  margin: 0px 10px;
+  color: #333;
+}
+
+i.fas,
+i.fab:hover{
+  color: #777;
+}
+
+#heart {
+  font-size: 16px;
+  color: red;
+}
+
+#coffee {
+  font-size: 20px;
+  color: brown;
+}
+
+#moon {
+  font-size: 16px;
+  color: blue;
+}
+
+#bootstrap {
+  font-size: 16px;
+  color: purple;
+}
+
+#github {
+  font-size: 16px;
+  color: black;
 }
