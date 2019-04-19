@@ -1,99 +1,121 @@
 (function ($) {
-    // writes the string
-    //
-    // @param jQuery $target
-    // @param String str
-    // @param Numeric cursor
-    // @param Numeric delay
-    // @param Function cb
-    // @return void
-    function typeString($target, str, cursor, delay, cb) {
-        $target.html(function (_, html) {
-            return html + str[cursor];
-        });
+  // writes the string
+  //
+  // @param jQuery $target
+  // @param String str
+  // @param Numeric cursor
+  // @param Numeric delay
+  // @param Function cb
+  // @return void
+  function typeString($target, str, cursor, delay, cb) {
+    $target.html(function (_, html) {
+      return html + str[cursor];
+    });
 
-        if (cursor < str.length - 1) {
-            setTimeout(function () {
-            typeString($target, str, cursor + 1, delay, cb);
-            }, delay);
-        }
-        else {
-            cb();
-        }
+    if (cursor < str.length - 1) {
+      setTimeout(function () {
+      typeString($target, str, cursor + 1, delay, cb);
+      }, delay);
     }
-
-    // clears the string
-    //
-    // @param jQuery $target
-    // @param Numeric delay
-    // @param Function cb
-    // @return void
-    function deleteString($target, delay, cb) {
-        var length;
-
-        $target.html(function (_, html) {
-            length = html.length;
-            return html.substr(0, length - 1);
-        });
-
-        if (length > 1) {
-            setTimeout(function () {
-                deleteString($target, delay, cb);
-            }, delay);
-        }
-        else {
-            cb();
-        }
+    else {
+      cb();
     }
+  }
+
+  // clears the string
+  //
+  // @param jQuery $target
+  // @param Numeric delay
+  // @param Function cb
+  // @return void
+  function deleteString($target, delay, cb) {
+    var length;
+
+    $target.html(function (_, html) {
+      length = html.length;
+      return html.substr(0, length - 1);
+    });
+
+    if (length > 1) {
+      setTimeout(function () {
+        deleteString($target, delay, cb);
+      }, delay);
+    }
+    else {
+      cb();
+    }
+  }
 
     // jQuery hook
-    $.fn.extend({
-        teletype: function (opts) {
-            var settings = $.extend({}, $.teletype.defaults, opts);
+  $.fn.extend({
+    teletype: function (opts) {
+      var settings = $.extend({}, $.teletype.defaults, opts);
 
-            return $(this).each(function () {
-                (function loop($tar, idx) {
-                    // type
-                    typeString($tar, settings.text[idx], 0, settings.delay, function () {
-                        // delete
-                        setTimeout(function () {
-                            deleteString($tar, settings.delay, function () {
-                                loop($tar, (idx + 1) % settings.text.length);
-                            });
-                        }, settings.pause);
-                    });
-                }($(this), 0));
-            });
-        }
-    });
+      return $(this).each(function () {
+        (function loop($tar, idx) {
+          // type
+          typeString($tar, settings.text[idx], 0, settings.delay, function () {
+            // delete
+            setTimeout(function () {
+              deleteString($tar, settings.delay, function () {
+                loop($tar, (idx + 1) % settings.text.length);
+              });
+            }, settings.pause);
+          });
+        }($(this), 0));
+      });
+    }
+  });
 
     // plugin defaults  
-    $.extend({
-        teletype: {
-            defaults: {
-                delay: 100,
-                pause: 2000,
-                text: []
-            }
-        }
-    });
+  $.extend({
+    teletype: {
+      defaults: {
+        delay: 100,
+        pause: 2000,
+        text: []
+      }
+    }
+  });
 }(jQuery));
 
 
 
 $( document ).ready(function() {
-    $('#cursor').teletype({
-        text: ['_', ' '],
-        delay: 0,
-        pause: 500
-    });
+  $('#cursor').teletype({
+    text: ['_', ' '],
+    delay: 0,
+    pause: 500
+  });
 
-    $('#changing-text').teletype({
-        text: [
-          'software developer,',
-          'collaborative worker,',
-          'tea drinker,',
-          'noun verber.'
-        ]
-    });
+  $('#changing-text').teletype({
+    text: [
+      'software developer,',
+      'collaborative worker,',
+      'tea drinker,',
+      'noun verber.'
+    ]
+  });
+
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
 });
