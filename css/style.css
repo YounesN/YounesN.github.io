@@ -99,14 +99,22 @@ h4 {
   margin-top: 25px;
 }
 
-i.fas,
+i.fas {
+  font-size: 40px;
+  margin: 0px 10px;
+  color: #333;
+}
+
 i.fab {
   font-size: 40px;
   margin: 0px 10px;
   color: #333;
 }
 
-i.fas,
+i.fas:hover {
+  color: #777;
+}
+
 i.fab:hover{
   color: #777;
 }
